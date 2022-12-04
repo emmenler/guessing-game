@@ -1,2 +1,6 @@
 --- GUESSING GAME ---
 
+PROJECT STRUCTURE
+- Since the project is going to be quite small, i will develop all feature on single branch.
+- Game logic will be built in single JS file, visuals are going to be divided by HTML and separate CSS file.
+- Firstly i will develop desktop-only version, but i want to pracrice on making adaptive layout, so i will make the game for mobile in the future.
