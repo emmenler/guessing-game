@@ -8,4 +8,4 @@ PROJECT STRUCTURE
 LAYOUT AND STYLES
 - My font of choice: Orbitron
 - I decided to make a neu-brutalistic design, with some bright colors and destinct borders.
-- Color scheme: #f44444 #fcccb4 #1dbbbe #53a3a9 #a8b6b2 #3c546c font color: #212529
+- Color scheme: #f44444 #f55757 #fcccb4 #1dbbbe #53a3a9 #a8b6b2 #3c546c font color: #212529

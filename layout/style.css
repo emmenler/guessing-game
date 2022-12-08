@@ -40,6 +40,10 @@ header {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 5.2rem;
+  text-shadow: 1px 3px #f44444;
+  font-weight: 500;
+  margin-bottom: 4.8rem;
 }
 
 .hidden-number {
@@ -48,6 +52,10 @@ header {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
+  font-size: 7.4rem;
+  padding: 1.2rem 2.4rem;
+  border: solid 4px #212529;
+  background-color: #f55757;
 }
 
 .range {
@@ -87,7 +95,7 @@ main {
   border: none;
   font-family: inherit;
   color: inherit;
-  background-color: #f44444;
+  background-color: #f55757;
   border: solid 2px #212529;
   padding: 1.2rem 1.6rem;
   border-radius: 4rem;
@@ -98,7 +106,7 @@ main {
 .btn:hover,
 .btn:active {
   transition: background-color 120ms;
-  background-color: #f55757;
+  background-color: #f44444;
 }
 
 /*
