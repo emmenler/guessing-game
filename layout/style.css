@@ -15,17 +15,16 @@ body {
   font-family: 'Orbitron', sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
-  /* background: linear-gradient(#868e96, #e7e8ea); */
-  background-color: #868e96;
+  color: #212529;
+  background-color: #444c6d;
 }
 
 /* HEADER */
 
 header {
-  /* border-bottom: 3px solid #111; */
   position: relative;
-  height: 40vh;
+  height: 35vh;
+  /* border-bottom: #212529 3px solid; */
 }
 
 .container {
@@ -50,10 +49,15 @@ header {
   transform: translate(-50%, 50%);
 }
 
-/* MAIN */
+.range {
+  font-size: 2.4rem;
+  padding: 1.2rem 1.6rem;
+}
+
+/* MAIN LAYOUT */
 
 main {
-  height: 60vh;
+  height: 65vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -66,6 +70,12 @@ main {
   align-items: center;
 }
 
+.score-side {
+  max-width: 50rem;
+}
+
+/* INPUT SIDE */
+
 .input-guess {
   display: block;
   border: none;
@@ -75,22 +85,19 @@ main {
 .btn {
   border: none;
   font-family: inherit;
-  background-color: #fff;
+  color: inherit;
+  background-color: #12717e;
+  border: solid 2px #212529;
   padding: 1.2rem 1.6rem;
   border-radius: 4rem;
   cursor: pointer;
-  /* box-shadow: 0 0 1.6rem 0 #555; */
   font-size: 2.4rem;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: #dee2e6;
+  background-color: #f44a37;
   transition: all 3ms;
-}
-
-.score-side {
-  max-width: 50rem;
 }
 
 /*
