@@ -16,7 +16,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #212529;
-  background-color: #444c6d;
+  background-color: #fcccb4;
 }
 
 /* HEADER */
@@ -31,6 +31,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 2.4rem;
+  align-items: center;
 }
 
 .game-name {
@@ -86,7 +87,7 @@ main {
   border: none;
   font-family: inherit;
   color: inherit;
-  background-color: #12717e;
+  background-color: #f44444;
   border: solid 2px #212529;
   padding: 1.2rem 1.6rem;
   border-radius: 4rem;
@@ -96,8 +97,8 @@ main {
 
 .btn:hover,
 .btn:active {
-  background-color: #f44a37;
-  transition: all 3ms;
+  transition: background-color 120ms;
+  background-color: #f55757;
 }
 
 /*
