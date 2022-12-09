@@ -208,6 +208,9 @@ h2 {
   font-size: 1.8rem;
 }
 
+.hidden {
+  display: none;
+}
 /*
 -- TYPOGRAPHY
 
