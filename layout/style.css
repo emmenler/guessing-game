@@ -88,7 +88,13 @@ main {
 .input-guess {
   display: block;
   border: none;
-  width: 4.8rem;
+  width: 20rem;
+  border: solid 2px #212529;
+  font-size: 6.4rem;
+  margin-bottom: 2.4rem;
+  text-align: center;
+  font-family: inherit;
+  padding: 1.2rem 2.4rem;
 }
 
 .btn {
