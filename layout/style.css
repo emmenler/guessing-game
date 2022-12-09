@@ -70,6 +70,8 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  justify-items: center;
+  column-gap: 6.4rem;
 }
 
 .input-side {
@@ -81,6 +83,7 @@ main {
 
 .score-side {
   max-width: 50rem;
+  margin-right: 8rem;
 }
 
 /* INPUT SIDE */
@@ -113,6 +116,20 @@ main {
 .btn:active {
   transition: background-color 120ms;
   background-color: #f44444;
+}
+
+/* SCORE SIDE */
+
+.message {
+  font-size: 3rem;
+}
+
+.status {
+  margin-bottom: 6.4rem;
+}
+
+.score {
+  margin-bottom: 2rem;
 }
 
 /*
