@@ -88,15 +88,18 @@ main {
 
 /* INPUT SIDE */
 
+.input {
+  text-align: center;
+  font-family: inherit;
+}
+
 .input-guess {
   display: block;
-  border: none;
   width: 20rem;
   border: solid 2px #212529;
   font-size: 6.4rem;
   margin-bottom: 2.4rem;
-  text-align: center;
-  font-family: inherit;
+
   padding: 1.2rem 2.4rem;
 }
 
@@ -144,6 +147,7 @@ main {
   top: 0;
   left: 50%;
   transform: translate(-50%, 46%);
+  background-color: #fcccb4;
 }
 
 .menu-open {

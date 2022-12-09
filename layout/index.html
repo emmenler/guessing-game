@@ -21,16 +21,37 @@
           <ion-icon class="menu-open" name="menu-outline"></ion-icon>
         </button>
         <p class="range">
-          (Between <span class="min">1</span> and <span class="max">20</span>)
+          (Between <span class="min-range">1</span> and
+          <span class="max-range">20</span>)
         </p>
-        <menu class="game-settings hidden"></menu>
       </div>
+      <menu class="game-settings hidden">
+        <h2>Game settings</h2>
+        <div class="settings-container">
+          <div class="min-guess">
+            <p class="min">Min guess:</p>
+            <input
+              type="number"
+              class="input input-value min-value"
+              value="1"
+            />
+          </div>
+          <div class="max-guess">
+            <p class="max">Max guess:</p>
+            <input
+              type="number"
+              class="input input-value max-value"
+              value="20"
+            />
+          </div>
+        </div>
+      </menu>
       <h1 class="game-name">Guess the number!</h1>
       <p class="hidden-number">?</p>
     </header>
     <main>
       <section class="input-side">
-        <input type="number" class="input-guess" />
+        <input type="number" class="input input-guess" />
         <button class="btn btn-submit">Submit</button>
       </section>
       <section class="score-side">
