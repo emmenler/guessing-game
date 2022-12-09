@@ -70,8 +70,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-items: center;
-  column-gap: 6.4rem;
+  column-gap: 4.8rem;
 }
 
 .input-side {
@@ -79,11 +78,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-self: center;
 }
 
 .score-side {
   max-width: 50rem;
-  margin-right: 8rem;
+  margin-left: 8rem;
 }
 
 /* INPUT SIDE */
