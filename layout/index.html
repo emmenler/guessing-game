@@ -17,9 +17,13 @@
     <header>
       <div class="container">
         <button class="btn btn-restart">Restart</button>
+        <button class="btn btn-menu">
+          <ion-icon class="menu-open" name="menu-outline"></ion-icon>
+        </button>
         <p class="range">
           (Between <span class="min">1</span> and <span class="max">20</span>)
         </p>
+        <menu class="game-settings hidden"></menu>
       </div>
       <h1 class="game-name">Guess the number!</h1>
       <p class="hidden-number">?</p>
@@ -37,5 +41,13 @@
         </p>
       </section>
     </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
