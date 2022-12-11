@@ -126,12 +126,12 @@ main {
   font-size: 3rem;
 }
 
-.status {
+.msg-status {
   margin-bottom: 6.4rem;
   font-weight: 500;
 }
 
-.score {
+.msg-score {
   margin-bottom: 2rem;
 }
 
