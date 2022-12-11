@@ -39,8 +39,8 @@ restartBtn.addEventListener('click', restartGame);
 // restartSaveBtn.addEventListener('click');
 
 // These are menu-relied event handlers
-// openMenuBtn.addEventListener('click');
-// closeMenuBtn.addEventListener('click');
+openMenuBtn.addEventListener('click', openMenu);
+closeMenuBtn.addEventListener('click', closeMenu);
 
 // These are keybord global event handlers
 
@@ -125,8 +125,6 @@ function restartGame() {
   openMenuBtn.classList.remove('win', 'lose', 'cold', 'hot');
   bodyEl.style.backgroundColor = '#fcccb4';
   hiddenNumberEl.textContent = `?`;
-
-  currentScore = maxRange;
   hiddenNumber = Math.trunc(Math.random() * maxRange) + 1;
   console.log(`secret num Res = ${hiddenNumber}`);
 
@@ -135,6 +133,14 @@ function restartGame() {
   inputGuessInp.value = ``;
 
   submitGuessBtn.addEventListener('click', submitGuess);
+}
+
+// This is restart & save function that resets the game with new max and min. It will run when player presses the 'Save and restart' button in settings menu.
+function restartSaveGame() {}
+
+function openMenu() {
+  document.querySelector('.game-settings').classList.remove('hidden');
+  document.querySelector('.overlay').classList.remove('hidden');
 }
 
 // Tests
