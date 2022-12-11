@@ -7,6 +7,10 @@ const arrMinMax = [1, 20];
 let minRange = arrMinMax[arrMinMax.length - 2];
 let maxRange = arrMinMax[arrMinMax.length - 1];
 
+// These are score and highscore values
+let currentScore = maxRange - minRange + 1;
+let currentHighScore = 0;
+
 // This variable stores the random number that user needs to guess and is reset when you restart the game
 let hiddenNumber = Math.trunc(Math.random() * maxRange) + 1;
 
@@ -46,8 +50,13 @@ function submitGuess() {
   if (guess < minRange || guess > maxRange) {
     statusMsgEl.textContent = `Your guess is not in range!`;
   } else if (guess !== hiddenNumber) {
-    wrongGuess(guess);
-  } else if (guess === hiddenNumber) {
+    countScore();
+    if (currentScore > 0) {
+      wrongGuess(guess);
+    } else {
+      statusMsgEl.textContent = `Game over :(`;
+    }
+  } else if (guess === hiddenNumber && currentScore > 0) {
     statusMsgEl.textContent = `Correct!`;
   }
 }
@@ -58,6 +67,14 @@ function wrongGuess(guess) {
     statusMsgEl.textContent = `Too hot!`;
   } else if (guess < hiddenNumber) {
     statusMsgEl.textContent = `Too cold!`;
+  }
+}
+
+// This function checks is score is higher than 0 and if true reduces score by 1
+function countScore() {
+  if (currentScore > 0) {
+    currentScore--;
+    document.querySelector('.value-score').textContent = currentScore;
   }
 }
 
