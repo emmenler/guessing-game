@@ -58,6 +58,7 @@ function submitGuess() {
     }
   } else if (guess === hiddenNumber && currentScore > 0) {
     statusMsgEl.textContent = `Correct!`;
+    displayWin();
   }
 }
 
@@ -76,6 +77,20 @@ function countScore() {
     currentScore--;
     document.querySelector('.value-score').textContent = currentScore;
   }
+}
+
+// This function checks if current score > current highscore. If true it sets highscore to current score
+function countHighScore(score) {
+  if (score > currentHighScore) {
+    currentHighScore = score;
+  }
+}
+
+// This function displays the correct number when player guess is right
+function displayWin() {
+  hiddenNumberEl.textContent = hiddenNumber;
+  countHighScore(currentScore);
+  highscoreValueEl.textContent = currentHighScore;
 }
 
 // Tests
