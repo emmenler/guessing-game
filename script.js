@@ -35,7 +35,7 @@ const bodyEl = document.querySelector('body');
 submitGuessBtn.addEventListener('click', submitGuess);
 
 // These are restart event handlers
-// restartBtn.addEventListener('click');
+restartBtn.addEventListener('click', restartGame);
 // restartSaveBtn.addEventListener('click');
 
 // These are menu-relied event handlers
@@ -118,6 +118,23 @@ function displayHot() {
   openMenuBtn.classList.remove('cold');
   bodyEl.style.backgroundColor = '#ff945f';
   openMenuBtn.classList.add('hot');
+}
+
+// This is restart function that resets the game with CURRENT ranges, while saving the highscore
+function restartGame() {
+  openMenuBtn.classList.remove('win', 'lose', 'cold', 'hot');
+  bodyEl.style.backgroundColor = '#fcccb4';
+  hiddenNumberEl.textContent = `?`;
+
+  currentScore = maxRange;
+  hiddenNumber = Math.trunc(Math.random() * maxRange) + 1;
+  console.log(`secret num Res = ${hiddenNumber}`);
+
+  statusMsgEl.textContent = `Take a guess...`;
+  scoreValueEl.textContent = maxRange;
+  inputGuessInp.value = ``;
+
+  submitGuessBtn.addEventListener('click', submitGuess);
 }
 
 // Tests
