@@ -33,7 +33,7 @@ submitGuessBtn.addEventListener('click', submitGuess);
 // restartBtn.addEventListener('click');
 // restartSaveBtn.addEventListener('click');
 
-// // These are menu-relied event handlers
+// These are menu-relied event handlers
 // openMenuBtn.addEventListener('click');
 // closeMenuBtn.addEventListener('click');
 
@@ -49,6 +49,15 @@ function submitGuess() {
     wrongGuess(guess);
   } else if (guess === hiddenNumber) {
     statusMsgEl.textContent = `Correct!`;
+  }
+}
+
+// This function checks if guess is higher or lower than the rigth number and displays an according message
+function wrongGuess(guess) {
+  if (guess > hiddenNumber) {
+    statusMsgEl.textContent = `Too hot!`;
+  } else if (guess < hiddenNumber) {
+    statusMsgEl.textContent = `Too cold!`;
   }
 }
 
