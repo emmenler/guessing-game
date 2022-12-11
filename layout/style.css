@@ -116,7 +116,7 @@ main {
 
 .btn:hover,
 .btn:active {
-  transition: background-color 120ms;
+  transition: background-color 0.2s;
   background-color: #f44444;
 }
 
@@ -137,6 +137,10 @@ main {
 }
 
 /* MENU */
+
+.menu {
+  position: relative;
+}
 
 .btn-menu {
   display: flex;
@@ -170,11 +174,27 @@ main {
   font-size: 3.2rem;
 }
 
+.btn-menu-close {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 5rem;
+  position: absolute;
+  top: 0.6rem;
+  right: 1.6rem;
+}
+
+.btn-menu-close:hover,
+.btn-menu-close:active {
+  color: #f44444;
+  transition: 0.1s;
+}
+
 .game-settings {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  padding: 3.2rem;
+  padding: 4.8rem;
   border-radius: 2rem;
   border: #212529 solid 2px;
   width: 40%;
