@@ -138,9 +138,15 @@ function restartGame() {
 // This is restart & save function that resets the game with new max and min. It will run when player presses the 'Save and restart' button in settings menu.
 function restartSaveGame() {}
 
+// These functions close and open the settings menu, by adding or removing the 'hidden' class
 function openMenu() {
   document.querySelector('.game-settings').classList.remove('hidden');
   document.querySelector('.overlay').classList.remove('hidden');
+}
+
+function closeMenu() {
+  document.querySelector('.game-settings').classList.add('hidden');
+  document.querySelector('.overlay').classList.add('hidden');
 }
 
 // Tests
