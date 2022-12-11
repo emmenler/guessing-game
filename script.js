@@ -30,11 +30,29 @@ const highscoreValueEl = document.querySelector('.value-highscore');
 submitGuessBtn.addEventListener('click', submitGuess);
 
 // These are restart event handlers
-restartBtn.addEventListener('click');
-restartSaveBtn.addEventListener('click');
+// restartBtn.addEventListener('click');
+// restartSaveBtn.addEventListener('click');
 
-// These are menu-relied event handlers
-openMenuBtn.addEventListener('click');
-closeMenuBtn.addEventListener('click');
+// // These are menu-relied event handlers
+// openMenuBtn.addEventListener('click');
+// closeMenuBtn.addEventListener('click');
 
 // These are keybord global event handlers
+
+// This function checks if the guess is correct or not after pressing submit button
+function submitGuess() {
+  const guess = Number(inputGuessInp.value);
+  console.log(`guess = ${guess}`);
+  if (guess < minRange || guess > maxRange) {
+    statusMsgEl.textContent = `Your guess is not in range!`;
+  } else if (guess !== hiddenNumber) {
+    wrongGuess(guess);
+  } else if (guess === hiddenNumber) {
+    statusMsgEl.textContent = `Correct!`;
+  }
+}
+
+// Tests
+console.log(`min = ${minRange}`);
+console.log(`max = ${maxRange}`);
+console.log(`secret num = ${hiddenNumber}`);
