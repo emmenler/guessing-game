@@ -18,3 +18,4 @@ RESTARTING FUNCTIONS
 
 DISPLAY FEATURES
 - I can disble event-handlers at will by using '.removeEventListener('click', functionName)' method. Used this to make the 'Submit' button inactive when player wins or loses the game.
+- This symbol '×' looks pretty good as closing button.

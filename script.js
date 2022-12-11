@@ -18,9 +18,11 @@ let hiddenNumber = Math.trunc(Math.random() * maxRange) + 1;
 const restartBtn = document.querySelector('.btn-restart');
 const restartSaveBtn = document.querySelector('.btn-save');
 const submitGuessBtn = document.querySelector('.btn-submit');
-const inputGuessInp = document.querySelector('.input-guess');
 const openMenuBtn = document.querySelector('.btn-menu');
 const closeMenuBtn = document.querySelector('.btn-menu-close');
+const inputGuessInp = document.querySelector('.input-guess');
+const inputMinInp = document.querySelector('.min-value');
+const inputMaxInp = document.querySelector('.max-value');
 
 // These are display-only elements selector variables
 const hiddenNumberEl = document.querySelector('.hidden-number');
@@ -36,7 +38,7 @@ submitGuessBtn.addEventListener('click', submitGuess);
 
 // These are restart event handlers
 restartBtn.addEventListener('click', restartGame);
-// restartSaveBtn.addEventListener('click');
+restartSaveBtn.addEventListener('click', restartSaveGame);
 
 // These are menu-relied event handlers
 openMenuBtn.addEventListener('click', openMenu);
@@ -47,7 +49,6 @@ closeMenuBtn.addEventListener('click', closeMenu);
 // This function checks if the guess is correct or not after pressing submit button
 function submitGuess() {
   const guess = Number(inputGuessInp.value);
-  console.log(`guess = ${guess}`);
   if (guess < minRange || guess > maxRange) {
     statusMsgEl.textContent = `Your guess is not in range!`;
   } else if (guess !== hiddenNumber) {
@@ -126,17 +127,22 @@ function restartGame() {
   bodyEl.style.backgroundColor = '#fcccb4';
   hiddenNumberEl.textContent = `?`;
   hiddenNumber = Math.trunc(Math.random() * maxRange) + 1;
-  console.log(`secret num Res = ${hiddenNumber}`);
-
   statusMsgEl.textContent = `Take a guess...`;
-  scoreValueEl.textContent = maxRange;
+  currentScore = maxRange - minRange + 1;
+  scoreValueEl.textContent = currentScore;
   inputGuessInp.value = ``;
-
   submitGuessBtn.addEventListener('click', submitGuess);
 }
 
 // This is restart & save function that resets the game with new max and min. It will run when player presses the 'Save and restart' button in settings menu.
-function restartSaveGame() {}
+function restartSaveGame() {
+  arrMinMax.push(Number(inputMinInp.value));
+  arrMinMax.push(Number(inputMaxInp.value));
+  minRange = arrMinMax[arrMinMax.length - 2];
+  maxRange = arrMinMax[arrMinMax.length - 1];
+  closeMenu();
+  restartGame();
+}
 
 // These functions close and open the settings menu, by adding or removing the 'hidden' class
 function openMenu() {
@@ -153,3 +159,4 @@ function closeMenu() {
 console.log(`min = ${minRange}`);
 console.log(`max = ${maxRange}`);
 console.log(`secret num = ${hiddenNumber}`);
+console.log(arrMinMax);
