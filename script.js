@@ -61,6 +61,7 @@ function submitGuess() {
   } else if (guess === hiddenNumber && currentScore > 0) {
     statusMsgEl.textContent = `Correct!`;
     displayWin();
+    submitGuessBtn.removeEventListener('click', submitGuess);
   }
 }
 
@@ -87,30 +88,34 @@ function countScore() {
 function countHighScore(score) {
   if (score > currentHighScore) {
     currentHighScore = score;
+    highscoreValueEl.textContent = currentHighScore;
   }
 }
 
 // This function displays the correct number and changes other things when player guess is right
 function displayWin() {
+  openMenuBtn.classList.remove('cold', 'hot');
   hiddenNumberEl.textContent = hiddenNumber;
   countHighScore(currentScore);
-  highscoreValueEl.textContent = currentHighScore;
   bodyEl.style.backgroundColor = '#cfeb88';
   openMenuBtn.classList.add('win');
 }
 
 function displayLose() {
+  openMenuBtn.classList.remove('cold', 'hot');
   bodyEl.style.backgroundColor = '#50657b';
   openMenuBtn.classList.add('lose');
 }
 
 function displayCold() {
+  openMenuBtn.classList.remove('hot');
   bodyEl.style.backgroundColor = '#a8b6b2';
   openMenuBtn.classList.add('cold');
 }
 
 function displayHot() {
-  bodyEl.style.backgroundColor = '#ff874c';
+  openMenuBtn.classList.remove('cold');
+  bodyEl.style.backgroundColor = '#ff945f';
   openMenuBtn.classList.add('hot');
 }
 
