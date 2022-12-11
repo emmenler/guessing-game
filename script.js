@@ -14,6 +14,7 @@ let hiddenNumber = Math.trunc(Math.random() * maxRange) + 1;
 const restartBtn = document.querySelector('.btn-restart');
 const restartSaveBtn = document.querySelector('.btn-save');
 const submitGuessBtn = document.querySelector('.btn-submit');
+const inputGuessInp = document.querySelector('.input-guess');
 const openMenuBtn = document.querySelector('.btn-menu');
 const closeMenuBtn = document.querySelector('.btn-menu-close');
 
@@ -24,3 +25,16 @@ const maxRangeEl = document.querySelector('.max-range');
 const statusMsgEl = document.querySelector('.msg-status');
 const scoreValueEl = document.querySelector('.value-score');
 const highscoreValueEl = document.querySelector('.value-highscore');
+
+// This is game-relied event handler
+submitGuessBtn.addEventListener('click', submitGuess);
+
+// These are restart event handlers
+restartBtn.addEventListener('click');
+restartSaveBtn.addEventListener('click');
+
+// These are menu-relied event handlers
+openMenuBtn.addEventListener('click');
+closeMenuBtn.addEventListener('click');
+
+// These are keybord global event handlers
