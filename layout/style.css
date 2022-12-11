@@ -104,7 +104,6 @@ main {
 }
 
 .btn {
-  border: none;
   font-family: inherit;
   color: inherit;
   background-color: #f55757;
@@ -161,12 +160,13 @@ main {
   padding: 3.2rem;
   border-radius: 2rem;
   border: #212529 solid 2px;
-  width: 25%;
+  width: 40%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 0%);
   z-index: 6;
+  align-items: center;
 }
 
 .overlay {
@@ -185,14 +185,15 @@ h2 {
   font-weight: 500;
   text-shadow: 1px 2px #f44444;
   text-align: center;
-  margin-bottom: 3.2rem;
+  margin-bottom: 4.8rem;
 }
 
 .settings-container {
   display: grid;
   grid-template-columns: 9fr 1fr;
-  padding: 0 2.4rem 0 2.4rem;
+  padding: 0 4.8rem;
   row-gap: 2.4rem;
+  margin-bottom: 5.6rem;
 }
 
 .min,
@@ -210,6 +211,10 @@ h2 {
 
 .hidden {
   display: none;
+}
+
+.btn-save {
+  width: 80%;
 }
 /*
 -- TYPOGRAPHY
