@@ -29,6 +29,7 @@ const maxRangeEl = document.querySelector('.max-range');
 const statusMsgEl = document.querySelector('.msg-status');
 const scoreValueEl = document.querySelector('.value-score');
 const highscoreValueEl = document.querySelector('.value-highscore');
+const bodyEl = document.querySelector('body');
 
 // This is game-relied event handler
 submitGuessBtn.addEventListener('click', submitGuess);
@@ -55,6 +56,7 @@ function submitGuess() {
       wrongGuess(guess);
     } else {
       statusMsgEl.textContent = `Game over :(`;
+      displayLose();
     }
   } else if (guess === hiddenNumber && currentScore > 0) {
     statusMsgEl.textContent = `Correct!`;
@@ -66,8 +68,10 @@ function submitGuess() {
 function wrongGuess(guess) {
   if (guess > hiddenNumber) {
     statusMsgEl.textContent = `Too hot!`;
+    displayHot();
   } else if (guess < hiddenNumber) {
     statusMsgEl.textContent = `Too cold!`;
+    displayCold();
   }
 }
 
@@ -86,11 +90,28 @@ function countHighScore(score) {
   }
 }
 
-// This function displays the correct number when player guess is right
+// This function displays the correct number and changes other things when player guess is right
 function displayWin() {
   hiddenNumberEl.textContent = hiddenNumber;
   countHighScore(currentScore);
   highscoreValueEl.textContent = currentHighScore;
+  bodyEl.style.backgroundColor = '#cfeb88';
+  openMenuBtn.classList.add('win');
+}
+
+function displayLose() {
+  bodyEl.style.backgroundColor = '#50657b';
+  openMenuBtn.classList.add('lose');
+}
+
+function displayCold() {
+  bodyEl.style.backgroundColor = '#a8b6b2';
+  openMenuBtn.classList.add('cold');
+}
+
+function displayHot() {
+  bodyEl.style.backgroundColor = '#ff874c';
+  openMenuBtn.classList.add('hot');
 }
 
 // Tests

@@ -8,7 +8,7 @@ PROJECT STRUCTURE
 LAYOUT AND STYLES
 - My font of choice: Orbitron
 - I decided to make a neu-brutalistic design, with some bright colors and destinct borders.
-- Color scheme: #f44444 #f55757 #fcccb4 #1dbbbe #53a3a9 #a8b6b2 #3c546c font color: #212529
+- Color scheme: #f44444 #f55757 #fcccb4 #cfeb88 #50657b #1dbbbe #53a3a9 #a8b6b2  font color: #212529
 
 RESTARTING FUNCTIONS
 - I have two ways of restarting the game- via 'Restart' button, that simply sets score to it's normal value and resets all CSS styles back to default. And i have 'Save and restart' button in the menu. It will restart the game with new min and max values between which the player will guess the number.
