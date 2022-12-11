@@ -15,3 +15,6 @@ RESTARTING FUNCTIONS
 - NO I need to have a two sets of min/max variables - one that will be displayed and second that will be set in the menu which value will be assigned to the displayed value. NO
 - Instead of separate variables I made an array that stores max and min values. First two values are default 1 and 20, when user sets new values they get added to the end of array.
 - I want to make one function for both of my restart-buttons.
+
+DISPLAY FEATURES
+- I can disble event-handlers at will by using '.removeEventListener('click', functionName)' method. Used this to make the 'Submit' button inactive when player wins or loses the game.

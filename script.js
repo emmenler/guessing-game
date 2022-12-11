@@ -57,6 +57,7 @@ function submitGuess() {
     } else {
       statusMsgEl.textContent = `Game over :(`;
       displayLose();
+      submitGuessBtn.removeEventListener('click', submitGuess);
     }
   } else if (guess === hiddenNumber && currentScore > 0) {
     statusMsgEl.textContent = `Correct!`;
@@ -92,7 +93,7 @@ function countHighScore(score) {
   }
 }
 
-// This function displays the correct number and changes other things when player guess is right
+// These functions change the appearance of the ui depending on the guess when player submits his guess.
 function displayWin() {
   openMenuBtn.classList.remove('cold', 'hot');
   hiddenNumberEl.textContent = hiddenNumber;
