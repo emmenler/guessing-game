@@ -140,6 +140,8 @@ function restartSaveGame() {
   arrMinMax.push(Number(inputMaxInp.value));
   minRange = arrMinMax[arrMinMax.length - 2];
   maxRange = arrMinMax[arrMinMax.length - 1];
+  minRangeEl.textContent = minRange;
+  maxRangeEl.textContent = maxRange;
   closeMenu();
   restartGame();
 }
