@@ -32,6 +32,8 @@ const statusMsgEl = document.querySelector('.msg-status');
 const scoreValueEl = document.querySelector('.value-score');
 const highscoreValueEl = document.querySelector('.value-highscore');
 const bodyEl = document.querySelector('body');
+const settingsOverlayEl = document.querySelector('.overlay');
+const settingsMenuEl = document.querySelector('.game-settings');
 
 // This is game-relied event handler
 submitGuessBtn.addEventListener('click', submitGuess);
@@ -45,6 +47,9 @@ openMenuBtn.addEventListener('click', openMenu);
 closeMenuBtn.addEventListener('click', closeMenu);
 
 // These are keybord global event handlers
+// document.addEventListener('keydown', function (e) {
+//   console.log(e);
+// });
 
 // This function checks if the guess is correct or not after pressing submit button
 function submitGuess() {
@@ -66,6 +71,13 @@ function submitGuess() {
     submitGuessBtn.removeEventListener('click', submitGuess);
   }
 }
+
+// This event listener submits the guess on-click enter button
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter' && !inputGuessInp.textContent) {
+    submitGuess();
+  }
+});
 
 // This function checks if guess is higher or lower than the rigth number and displays an according message
 function wrongGuess(guess) {
@@ -148,14 +160,21 @@ function restartSaveGame() {
 
 // These functions close and open the settings menu, by adding or removing the 'hidden' class
 function openMenu() {
-  document.querySelector('.game-settings').classList.remove('hidden');
-  document.querySelector('.overlay').classList.remove('hidden');
+  settingsMenuEl.classList.remove('hidden');
+  settingsOverlayEl.classList.remove('hidden');
 }
 
 function closeMenu() {
-  document.querySelector('.game-settings').classList.add('hidden');
-  document.querySelector('.overlay').classList.add('hidden');
+  settingsMenuEl.classList.add('hidden');
+  settingsOverlayEl.classList.add('hidden');
 }
+
+// This event listener closes the menu on-click escape button
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !settingsMenuEl.classList.contains('hidden')) {
+    closeMenu();
+  }
+});
 
 // Tests
 console.log(`min = ${minRange}`);
