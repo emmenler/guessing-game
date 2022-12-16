@@ -175,9 +175,3 @@ document.addEventListener('keydown', function (e) {
     closeMenu();
   }
 });
-
-// Tests
-console.log(`min = ${minRange}`);
-console.log(`max = ${maxRange}`);
-console.log(`secret num = ${hiddenNumber}`);
-console.log(arrMinMax);
